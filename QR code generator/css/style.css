@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1b103b, #8e89c0);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 0px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container input {
+  width: 85%;
+  height: 45px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.container button {
+  width: 100%;
+  height: 45px;
+  background: #6f73b1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.container button:hover {
+  background: #4c4f77;
+}
+
+#imgBox {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imgBox.show-img {
+  display: flex;
+}
+
+#qrImage {
+  width: 150px;
+  display: none;
+  border-radius: 8px;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#spinner {
+  width: 40px;
+  height: 40px;
+  border: 5px solid rgba(111, 115, 177, 0.3);
+  border-top: 5px solid #6f73b1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#downloadBtn {
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #6f73b1;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  display: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#downloadBtn:hover {
+  background-color: #4c4f77;
+}
+
+.shake {
+  animation: shakeInput 0.4s ease;
+  border-color: red;
+}
+
+@keyframes shakeInput {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .container p {
+    font-size: 18px;
+  }
+
+  .container input {
+    font-size: 14px;
+  }
+
+  .container button {
+    font-size: 14px;
+  }
+
+  #qrImage {
+    width: 120px;
+  }
+
+  #spinner {
+    width: 35px;
+    height: 35px;
+  }
+
+  #downloadBtn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+
+  .container input {
+    font-size: 14px;
+  }
+
+  .container button {
+    font-size: 14px;
+  }
+
+  #qrImage {
+    width: 100px;
+  }
+
+  #spinner {
+    width: 30px;
+    height: 30px;
+  }
+
+  #downloadBtn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}

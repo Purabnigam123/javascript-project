@@ -130,7 +130,6 @@ body {
   100% { transform: translateX(0); }
 }
 
-/* Media Queries for Mobile Responsiveness */
 @media screen and (max-width: 768px) {
   .container {
     padding: 20px;

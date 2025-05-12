@@ -58,5 +58,4 @@ ELcard.insertBefore(errorDiv, ELheading);
 setTimeout(clearError, 3000);
 }
 function clearError(){
-document.querySelector('.alert').remove();
-}
+document.querySelector('.alert').remove();}
